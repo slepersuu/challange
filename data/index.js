@@ -41,13 +41,13 @@ var day = document.getElementById("day");
 day.textContent = challDay;
 
 
-dzisDeska.textContent = getMinutes(poczDesk + 5*(challDay));
-dzisTrzymanie.textContent = getMinutes(poczTrzymanie+2*(challDay));
-dzisBurpee.textContent = poczBurpee + challDay ;
+dzisDeska.textContent = getMinutes(poczDesk + 5*(challDay-1));
+dzisTrzymanie.textContent = getMinutes(poczTrzymanie+2*(challDay-1));
+dzisBurpee.textContent = poczBurpee + challDay -1;
 
-ostatniDeska.textContent = getMinutes(poczDesk + 5*(totalDays));
-ostatniTrzymanie.textContent = getMinutes(poczTrzymanie + 2*(totalDays));
-ostatniBurpee.textContent = poczBurpee + totalDays ;
+ostatniDeska.textContent = getMinutes(poczDesk + 5*(totalDays-1));
+ostatniTrzymanie.textContent = getMinutes(poczTrzymanie + 2*(totalDays-1));
+ostatniBurpee.textContent = poczBurpee + totalDays -1;
 
 progress.style.width = (challDay/totalDays)*100 + "%";
 progress.textContent = parseInt((challDay/totalDays)*100) + "%";
