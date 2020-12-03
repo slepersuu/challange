@@ -14,13 +14,8 @@ const poczBurpee = 5;
 const dzisiaj = new Date();
 
 const challDay = parseInt((dzisiaj.getTime() - dataPoczatku.getTime())/(24*3600*1000)) +1;
-console.log(dataPoczatku);
-// const challDay = dateDiff.getUTCDate()-1;
-
 const totalDays = parseInt((dataKonca.getTime() - dataPoczatku.getTime())/(24*3600*1000))+1;
-// console.log(totalDiff);
-// const totalDays = totalDiff.getUTCDate()-1;
-// console.log(totalDays);
+
 var podDeska = document.getElementById("pod-deska");
 var podTrzymanie = document.getElementById("pod-trzymanie");
 var podBurpee = document.getElementById("pod-burpee");
@@ -34,7 +29,6 @@ var ostatniTrzymanie = document.getElementById("ostatni-trzymanie");
 var ostatniBurpee = document.getElementById("ostatni-burpee");
 
 var progress = document.getElementById("progress-bar");
-
 var day = document.getElementById("day");
 
 
@@ -52,3 +46,17 @@ ostatniBurpee.textContent = poczBurpee + totalDays -1;
 progress.style.width = (challDay/totalDays)*100 + "%";
 progress.textContent = parseInt((challDay/totalDays)*100) + "%";
 
+
+
+var sumBurpee=0;
+var sumTrzymanie=0;
+var sumDeska= 0;
+for(i=0;i<challDay;i++){
+    sumDeska += poczDesk + 5*i;
+    sumTrzymanie += poczTrzymanie + 2*i;
+    sumBurpee += poczBurpee + i;
+}
+
+podDeska.textContent = getMinutes(sumDeska);
+podTrzymanie.textContent = getMinutes(sumTrzymanie);
+podBurpee.textContent = sumBurpee;
