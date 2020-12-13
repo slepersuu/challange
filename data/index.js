@@ -58,6 +58,6 @@ for(i=0;i<challDay;i++){
     sumBurpee += poczBurpee + i;
 }
 
-podDeska.textContent = getMinutes(sumDeska);
+podDeska.textContent = getMinutes(sumDeska-120);
 podTrzymanie.textContent = getMinutes(sumTrzymanie);
 podBurpee.textContent = sumBurpee;
