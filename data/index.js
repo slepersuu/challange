@@ -51,6 +51,7 @@ progress.textContent = parseInt((challDay/totalDays)*100) + "%";
 var sumBurpee=0;
 var sumTrzymanie=0;
 var sumDeska= 0;
+
 for(i=0;i<challDay;i++){
     sumDeska += poczDesk + 5*i;
     sumTrzymanie += poczTrzymanie + 2*i;
