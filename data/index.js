@@ -35,7 +35,7 @@ var day = document.getElementById("day");
 day.textContent = challDay;
 
 
-dzisDeska.textContent = getMinutes(poczDesk + 5*(challDay-1));
+dzisDeska.textContent = getMinutes(poczDesk + 5*(challDay-1)-120);
 dzisTrzymanie.textContent = getMinutes(poczTrzymanie+2*(challDay-1));
 dzisBurpee.textContent = poczBurpee + challDay -1;
 
@@ -57,7 +57,7 @@ for(i=0;i<challDay;i++){
     sumTrzymanie += poczTrzymanie + 2*i;
     sumBurpee += poczBurpee + i;
 }
-sumDeska -= 120;
+
 podDeska.textContent = getMinutes(sumDeska);
 podTrzymanie.textContent = getMinutes(sumTrzymanie);
 podBurpee.textContent = sumBurpee;
